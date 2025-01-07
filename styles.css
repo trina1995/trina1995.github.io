@@ -1,49 +1,64 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: #121212; /* Black background for the whole page */
     color: #ffffff;
 }
+
 .container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    padding: 20px;
-}
-.profile {
-    display: flex;
-    gap: 40px;
-    max-width: 1000px;
     width: 100%;
 }
-.profile-image {
-    flex: 1;
+
+.left-header {
+    flex: 1; /* Take up 50% of the width */
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Black background (removed green) */
 }
+
 .profile-image img {
     width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
+    max-width: 600px; /* Larger profile picture */
+    border-radius: 10px; /* Optional: Round the corners of the image */
 }
+
+.right-header {
+    flex: 1; /* Take up 50% of the width */
+    background-color: #121212; /* Black background */
+    padding: 0 20px; /* Padding to prevent content from sticking to the edges */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+}
+
 .profile-content {
-    flex: 2;
+    text-align: center; /* Center the text inside the content */
+    max-width: 600px; /* Set a maximum width for the paragraph */
+    width: 100%; /* Take up all available space within the max-width */
+    margin: 0 auto; /* Ensure the content stays centered */
 }
+
 .profile-content h1 {
     font-size: 36px;
     margin-bottom: 10px;
 }
+
 .profile-content h1 span {
-    color: #37d67a;
+    color: #37d67a; /* Green text for span */
 }
+
 .profile-content p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #cccccc;
 }
+
 .download-btn {
     text-decoration: none;
     color: #ffffff;
@@ -53,23 +68,28 @@ body {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
+
 .download-btn:hover {
     background-color: #2ca55c;
 }
+
 .social-icons {
     position: fixed; /* Fix the icons in place */
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
+    top: 50%; /* Position the icons at the vertical center */
+    right: 20px; /* Keep the icons 20px from the right edge */
+    transform: translateY(-50%); /* Center the icons perfectly */
     display: flex;
     flex-direction: column; /* Stack the icons vertically */
     gap: 15px; /* Add space between icons */
 }
+
 .social-icons a {
     text-decoration: none;
     color: #ffffff;
     font-size: 24px;
     transition: color 0.3s ease;
 }
+
 .social-icons a:hover {
-    color: #37d67a;
+    color: #37d67a; /* Change color on hover */
 }
